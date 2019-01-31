@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div id="loginOrRegister">
+      <h1>Registrate o inicia sesión</h1>
+      <form action="javascript:void(0)">
+        <p>Email</p>
+        <input id="emailTextfield" type="email">
+        <p>Contraseña</p>
+        <input id="passwordTextfield" type="password">
+        <button id="registerButton">Registrate</button>
+        <button id="loginButton">Logueate</button>
+      </form>
+    </div>
+    <div id="app">
+      <h1>¡Bienvenido/a! a la aplicación</h1>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD-HMgoYUEs1teZomGneYyDTRLDsrGb4f4",
+        authDomain: "tallerpersistencia-6fd5e.firebaseapp.com",
+        databaseURL: "https://tallerpersistencia-6fd5e.firebaseio.com",
+        projectId: "tallerpersistencia-6fd5e",
+        storageBucket: "tallerpersistencia-6fd5e.appspot.com",
+        messagingSenderId: "687402383931"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="src/js/main/main.js" type="module"></script>
+    <script src="src/js/auth/auth.js" type="module"></script>
+  </body>
+</html>
