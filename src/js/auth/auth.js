@@ -19,3 +19,13 @@ export const registerUser = (email, password) => {
       console.error("Error > "+error.message);
     });
 }
+
+export const loginUser = (email, password) => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((user)=>{
+      console.log("Usuario logueado > "+JSON.stringify(user));
+    })
+    .catch((error) => {
+      console.error("Error > "+error.message);
+    });
+}
